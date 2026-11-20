@@ -1,0 +1,55 @@
+dataset: users
+
+source_table: zomato_dev.bronze.users
+target_table: zomato_dev.silver.users
+
+columns:
+  - name: customer_id
+    source_column: user_id
+    data_type: DECIMAL(38,0)
+    nullable: false
+
+  - name: customer_name
+    source_column: name
+    data_type: STRING
+    nullable: true
+
+  - name: email
+    source_column: email
+    data_type: STRING
+    nullable: true
+
+  - name: age
+    source_column: Age
+    data_type: DECIMAL(38,0)
+    nullable: true
+
+  - name: gender
+    source_column: Gender
+    data_type: STRING
+    nullable: true
+
+  - name: marital_status
+    source_column: Marital Status
+    data_type: STRING
+    nullable: true
+
+  - name: occupation
+    source_column: Occupation
+    data_type: STRING
+    nullable: true
+
+  - name: income_band
+    source_column: Monthly Income
+    data_type: STRING
+    nullable: true
+
+  - name: education
+    source_column: Educational Qualifications
+    data_type: STRING
+    nullable: true
+
+  - name: family_size
+    source_column: Family size
+    data_type: DECIMAL(38,0)
+    nullable: true

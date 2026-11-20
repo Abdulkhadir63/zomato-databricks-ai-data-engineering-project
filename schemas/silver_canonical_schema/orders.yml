@@ -1,0 +1,108 @@
+dataset: orders
+
+source_table: zomato_dev.bronze.orders
+target_table: zomato_dev.silver.orders
+
+columns:
+  - name: order_id
+    source_column: order_id
+    data_type: DECIMAL(38,0)
+    nullable: false
+
+  - name: order_timestamp
+    source_column: order_timestamp
+    data_type: TIMESTAMP_NTZ
+    nullable: false
+
+  - name: order_date
+    source_column: order_date
+    data_type: DATE
+    nullable: false
+
+  - name: customer_id
+    source_column: user_id
+    data_type: DECIMAL(38,0)
+    nullable: false
+
+  - name: restaurant_id
+    source_column: r_id
+    data_type: DECIMAL(38,0)
+    nullable: false
+
+  - name: city
+    source_column: restaurant_city
+    data_type: STRING
+    nullable: false
+    transformation: "TRIM(COALESCE(REGEXP_SUBSTR(restaurant_city, '[^,]+$'), restaurant_city))"
+
+  - name: cuisine
+    source_column: cuisine
+    data_type: STRING
+    nullable: false
+
+  - name: items_count
+    source_column: items_count
+    data_type: DECIMAL(38,0)
+    nullable: false
+
+  - name: sales_qty
+    source_column: sales_qty
+    data_type: DECIMAL(38,0)
+    nullable: false
+
+  - name: subtotal
+    source_column: subtotal
+    data_type: DECIMAL(38,0)
+    nullable: false
+
+  - name: discount
+    source_column: discount
+    data_type: DECIMAL(38,0)
+    nullable: false
+
+  - name: delivery_fee
+    source_column: delivery_fee
+    data_type: DECIMAL(38,0)
+    nullable: false
+
+  - name: gst
+    source_column: gst
+    data_type: DECIMAL(38,0)
+    nullable: false
+
+  - name: sales_amount
+    source_column: sales_amount
+    data_type: DECIMAL(38,0)
+    nullable: false
+
+  - name: currency
+    source_column: currency
+    data_type: STRING
+    nullable: false
+
+  - name: payment_method
+    source_column: payment_method
+    data_type: STRING
+    nullable: false
+
+  - name: order_status
+    source_column: order_status
+    data_type: STRING
+    nullable: false
+
+  - name: is_delivered
+    source_column: order_status
+    data_type: BOOLEAN
+    nullable: false
+    derived: true
+    transformation: "order_status = 'Delivered'"
+
+  - name: customer_rating
+    source_column: customer_rating
+    data_type: DECIMAL(38,0)
+    nullable: true
+
+  - name: delivery_time_min
+    source_column: delivery_time_min
+    data_type: DECIMAL(38,0)
+    nullable: true

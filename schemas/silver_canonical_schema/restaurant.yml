@@ -1,0 +1,45 @@
+dataset: restaurant
+
+source_table: zomato_dev.bronze.restaurant
+target_table: zomato_dev.silver.restaurant
+
+columns:
+  - name: restaurant_id
+    source_column: id
+    data_type: DECIMAL(38,0)
+    nullable: false
+
+  - name: restaurant_name
+    source_column: name
+    data_type: STRING
+    nullable: true
+
+  - name: city
+    source_column: city
+    data_type: STRING
+    nullable: true
+
+  - name: rating
+    source_column: rating
+    data_type: DECIMAL(3,1)
+    nullable: true
+
+  - name: rating_count
+    source_column: rating_count
+    data_type: DECIMAL(38,0)
+    nullable: true
+
+  - name: cost_for_two
+    source_column: cost
+    data_type: DECIMAL(38,0)
+    nullable: true
+
+  - name: cuisine
+    source_column: cuisine
+    data_type: STRING
+    nullable: true
+
+  - name: license_no
+    source_column: lic_no
+    data_type: STRING
+    nullable: true

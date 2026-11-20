@@ -1,0 +1,20 @@
+dataset: food
+
+source_table: zomato_dev.bronze.food
+target_table: zomato_dev.silver.food
+
+columns:
+  - name: food_id
+    source_column: f_id
+    data_type: STRING
+    nullable: false
+
+  - name: food_name
+    source_column: item
+    data_type: STRING
+    nullable: false
+
+  - name: food_type
+    source_column: veg_or_non_veg
+    data_type: STRING
+    nullable: false

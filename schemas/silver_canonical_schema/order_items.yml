@@ -1,0 +1,40 @@
+dataset: order_items
+
+source_table: zomato_dev.bronze.order_items
+target_table: zomato_dev.silver.order_items
+
+columns:
+  - name: order_item_id
+    source_column: order_item_id
+    data_type: STRING
+    nullable: false
+
+  - name: order_id
+    source_column: order_id
+    data_type: STRING
+    nullable: false
+
+  - name: restaurant_id
+    source_column: r_id
+    data_type: STRING
+    nullable: false
+
+  - name: f_id
+    source_column: f_id
+    data_type: STRING
+    nullable: false
+
+  - name: price
+    source_column: price
+    data_type: DECIMAL(10,2)
+    nullable: false
+
+  - name: quantity
+    source_column: quantity
+    data_type: DECIMAL(38,0)
+    nullable: false
+
+  - name: line_amount
+    source_column: line_amount
+    data_type: DECIMAL(10,2)
+    nullable: false

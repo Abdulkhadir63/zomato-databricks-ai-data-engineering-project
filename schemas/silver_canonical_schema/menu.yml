@@ -1,0 +1,30 @@
+dataset: menu
+
+source_table: zomato_dev.bronze.menu
+target_table: zomato_dev.silver.menu
+
+columns:
+  - name: menu_id
+    source_column: menu_id
+    data_type: STRING
+    nullable: false
+
+  - name: restaurant_id
+    source_column: r_id
+    data_type: BIGINT
+    nullable: false
+
+  - name: food_id
+    source_column: f_id
+    data_type: STRING
+    nullable: false
+
+  - name: cuisine
+    source_column: cuisine
+    data_type: STRING
+    nullable: false
+
+  - name: price
+    source_column: price
+    data_type: DECIMAL(10,2)
+    nullable: false

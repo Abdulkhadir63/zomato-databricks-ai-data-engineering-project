@@ -1,0 +1,52 @@
+﻿# Python cache and compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Python virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Testing and linting artifacts
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.nox/
+.coverage
+htmlcov/
+
+# Environment variables and credentials
+.env
+.env.*
+!.env.example
+.databrickscfg
+**/.databrickscfg
+*.pem
+*.p12
+*.pfx
+*.key
+.aws/
+.azure/
+.gcloud/
+
+# IDE and operating system files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Logs and temporary files
+*.log
+logs/
+tmp/
+temp/
+
+# Databricks generated local state
+.databricks/bundle/
+
+# Runtime-generated data and artifacts
+checkpoints/
+spark-warehouse/

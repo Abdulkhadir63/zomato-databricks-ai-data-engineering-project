@@ -1,0 +1,46 @@
+dataset: reviews
+
+source_table: zomato_dev.bronze.reviews
+target_table: zomato_dev.silver.reviews
+
+columns:
+  - name: review_id
+    source_column: review_id
+    data_type: DECIMAL(38,0)
+    nullable: false
+
+  - name: order_id
+    source_column: order_id
+    data_type: DECIMAL(38,0)
+    nullable: true
+
+  - name: customer_id
+    source_column: user_id
+    data_type: DECIMAL(38,0)
+    nullable: true
+
+  - name: restaurant_id
+    source_column: restaurant_id
+    data_type: STRING
+    nullable: true
+
+  - name: rating
+    source_column: rating
+    data_type: DECIMAL(38,0)
+    nullable: true
+
+  - name: comment
+    source_column: comment
+    data_type: STRING
+    nullable: false
+
+  - name: review_date
+    source_column: review_date
+    data_type: DATE
+    nullable: true
+
+  - name: city
+    source_column: null
+    data_type: STRING
+    nullable: true
+    derived_from: zomato_dev.silver.restaurant.city
