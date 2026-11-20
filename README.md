@@ -110,6 +110,13 @@ This is a portfolio engineering project built with production-oriented practices
     alt=""
   />
 </p>
+<p align="center">
+  <img
+    src="docs/Restaurant Database ERD.png"
+    width="100%"
+    alt=""
+  />
+</p>
 
 ### Complete data platform
 
