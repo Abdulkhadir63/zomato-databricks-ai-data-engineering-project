@@ -103,22 +103,13 @@ This is a portfolio engineering project built with production-oriented practices
 
 <h2 align="center">🏗️ Architecture</h2>
 
-I divided the project into two main parts: the **data plane** and the **operations/control plane**.
-
-```text
-DATA PLANE
-→ Reads, validates, transforms and serves Zomato data.
-```
-
-```text
-OPERATIONS / CONTROL PLANE
-→ Observes pipeline execution, collects incident evidence,
-  investigates failures and records the result.
-```
-
-The data plane is responsible for the actual records. It starts with source files in S3 and produces Delta tables through Bronze, Silver and Gold.
-
-The operations plane is responsible for the lifecycle around a pipeline run. It uses Databricks job and pipeline metadata, evidence snapshots, governed read-only tools, operational runbooks, AI Search, the investigation workflow and durable Delta records.
+<p align="center">
+  <img
+    src="docs/project_architecuture.png"
+    width="100%"
+    alt=""
+  />
+</p>
 
 ### Complete data platform
 
