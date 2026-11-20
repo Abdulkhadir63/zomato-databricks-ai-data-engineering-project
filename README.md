@@ -105,7 +105,7 @@ This is a portfolio engineering project built with production-oriented practices
 
 <p align="center">
   <img
-    src="docs/project_architecuture.png"
+    src="docs/zomato_databricks_architecture.png"
     width="100%"
     alt=""
   />
