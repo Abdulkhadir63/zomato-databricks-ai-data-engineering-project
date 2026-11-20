@@ -1,6 +1,6 @@
 <h1 align="center">
   <img src="https://cdn.simpleicons.org/zomato/E23744" width="30" height="30" alt="Zomato"/>
-  &nbsp;ZOMATO LAKEHOUSE & OPERATIONS INTELLIGENCE PROJECT&nbsp;
+  &nbsp;ZOMATO-DATABRICKS-AI-DATA-ENGINEERING-PROJECT&nbsp;
   <img src="https://cdn.simpleicons.org/databricks/FF3621" width="30" height="30" alt="Databricks"/>
 </h1>
 
