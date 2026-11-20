@@ -2302,12 +2302,6 @@ These are engineering boundaries, not reasons to hide the implementation. A good
 
 ---
 
-<h2 align="center">📄 License</h2>
-
-This project is licensed under the MIT License. See [LICENSE](LICENSE) for the full license text.
-
----
-
 <div align="center">
 
 <h3 align="center">🌟 About Me</h3>
