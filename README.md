@@ -21,7 +21,7 @@
 <p align="center">
   <a href="#-lets-talk-about-what-i-built">Project overview</a>
   •
-  <a href="#-architecture">Architecture</a>
+  <a href="docs/zomato_databricks_architecture.png">Architecture</a>
   •
   <a href="#-the-30-day-build-journey">30-day build</a>
   •
